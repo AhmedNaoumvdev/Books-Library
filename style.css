@@ -86,7 +86,8 @@ main{
 .red{
     border: none;
     border-radius: 1em;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding: .1em .5em;
 }
 .green{
     background-color: green;
