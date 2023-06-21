@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Library</title>
+    <script src="https://kit.fontawesome.com/f69a353e3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <i class="fa-sharp fa-solid fa-moon dark"></i>
+            <h1>MYBO</h1>
+            <i class="fa-brands fa-github" id="git"></i>
+        </header>
+        <main >
+            <div class="addbook" >
+                <div class="plusicon" ><span>+</span></div>
+                <p >Add new book</p>
+            </div>
+        </main>
+        <footer>
+            <p>copyright &copy 2023. Made by <span>Ahmed</span></p>
+        </footer>
+    </div>
+    <div class="addiconhover" onclick="toggle()">
+        <span>+</span>
+    </div>
+    <div class="booksinput">
+        <form action="" class="bookform">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" >
+            </div>
+
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" >
+            </div>
+
+            <div>
+                <label for="pages">Number of pages</label>
+                <input type="number" id="pages" name="pages">
+            </div>
+
+            <div class="last">
+                <input type="checkbox" name="read" id="read">
+                <label for="read">Did you read it?</label>
+            </div>
+
+            <dvi class="btns">
+                <button type="submit">Add</button>
+                <button type="reset" class="close">Close</button>
+            </dvi>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primary: #e0e0e0;
+    --secondary: rgb(0, 0, 0);
+    --action: #001f3f;
+}
+
+.dark{
+    --primary: #3c3c3c;
+    --secondary: rgb(255, 255, 255);
+    --action: #001f3f;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 4fr .2fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
+    color: var(--secondary);
+    height: 100vh;
+}
+
+.container.active{
+    filter: blur(7px);
+}
+
+header{
+    grid-area: header;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 3px 8px rgb(198, 196, 196);
+    /* border-bottom: 5px solid var(--secondary); */
+    z-index: 1;
+}
+
+i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+#git:hover{
+    transform: rotate(360deg) scale(1.2);
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    background-color: var(--primary);
+    overflow-y: scroll;
+    padding-top: 1rem;
+}
+
+.cardstyle{
+    width: clamp(330px, 45%, 500px);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 2px solid var(--secondary);
+    border-radius: 1rem;
+    background-color: var(--primary);
+    padding: .7em;
+    text-align: left;
+}
+.green ,
+.red{
+    border: none;
+    border-radius: 1em;
+    font-size: 2rem;
+}
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.plusicon{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15rem;
+    border: 0.4rem dashed;
+    cursor: pointer;
+    transition: transform .7s;
+}
+
+.plusicon:hover{
+    transform: rotate(360deg);
+}
+
+.plusicon span:hover{
+    transform: rotate(-360deg);
+}
+
+.booksinput{
+    display: none;
+    
+}
+
+.booksinput.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(5px);
+    border-radius: 1.5rem;
+    border: 2px solid var(--action);
+    box-shadow: 0 5px 10px var(--action);
+    padding: .8rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 1;
+    height: 300px;
+    width: 320px;
+    transition: .5s;
+}
+
+.booksinput div{
+    border: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+    font-size: 1.2rem;
+}
+
+form div input{
+    outline: none;
+    border-radius: 1em;
+    border: .2em solid var(--action);
+    padding: .3em;
+    font-size: 1rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.booksinput div.last{
+    display: flex;
+    flex-direction: row;
+}
+
+.booksinput button{
+    font-size: 1.5rem;
+    width: 3.5em;
+    border-radius: 1em;
+    border: .1em solid var(--action);
+    padding: .25em;
+    color: var(--action);
+    /* background-color: var(--action); */
+    cursor: pointer;
+}
+
+.booksinput button:hover{
+    background-color: var(--action);
+    border: none;
+    color: white;
+}
+
+.addiconhover{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+main p{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--primary);
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+footer p{
+    font-size: 2rem;
+}
+
+
+@media (max-width: 769px){
+    footer p{
+        font-size: 1.5rem;
+    }
+}
