@@ -200,8 +200,13 @@ form div input{
     justify-content: center;
     align-items: center;
     color: var(--secondary);
-    font-size: 2rem;
+    font-size: 3rem;
     cursor: pointer;
+    transition: transform .5s;
+}
+
+.addiconhover.closed{
+    transform: rotate(45deg);
 }
 
 main p{

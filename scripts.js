@@ -67,7 +67,7 @@ const dark = document.querySelector('.dark')
 
 dark.addEventListener('click', toggleDark)
 press.addEventListener('click', toggle);
-closebtn.addEventListener('click', toggleAndReset);
+closebtn.addEventListener('click', toggle);
 
 function toggleDark(){
     root.classList.toggle('dark')
@@ -75,8 +75,11 @@ function toggleDark(){
 function toggle(){
     pop.classList.toggle('active')
     body.classList.toggle('active')
+    document.querySelector('.addiconhover').classList.toggle('closed')
 }
 function toggleAndReset(){
     pop.classList.toggle('active')
     body.classList.toggle('active')
+    document.querySelector('.addiconhover').classList.toggle('closed')
+
 }
